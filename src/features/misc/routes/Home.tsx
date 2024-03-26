@@ -7,7 +7,7 @@ export const Home = () => {
 
   const petalVariants = {
     hidden: { x: "100vw", y: "100vh", opacity: 0 },
-    visible: { x: "-100vw", y: "-100vh", opacity: 1, rotate: Math.random() * 360 },
+    visible: { x: "-100vw", y: "-100vh", opacity: 100, rotate: Math.random() * 500 },
   };
 
   return (
@@ -20,7 +20,7 @@ export const Home = () => {
       className="petal"
       style={{ 
         left: `${Math.random() * 100}vw`, // Random horizontal position from the left
-        bottom: `${Math.random() * 100}vh`,
+        // bottom: `${Math.random() * 100}vh`,
         // backgroundColor: `hsl(${Math.random() * 30 + 30}, 100%, 50%)`, // Random hue similar to ffaa00
         // borderRadius: `100% 0`,
       }}
@@ -29,8 +29,8 @@ export const Home = () => {
       animate="visible"
       transition={{
         repeat: Infinity,
-        duration: Math.random() * 9 + 9, // Random duration for each petal
-        delay: Math.random() * 7, // Random delay for each petal
+        duration: Math.random() * 20 + 20, // Random duration for each petal
+        delay: Math.random() * 10, // Random delay for each petal
       }}
     />
   ))}
@@ -79,7 +79,7 @@ export const Home = () => {
         </div>
           
         <div className='flex-1 flex justify-end'>
-          <p className='text-[64px] text-[24px] font-serif max-w-[1000px]  font-regular text-[#383838]'>
+          <p className='text-[64px] text-[22px] font-serif max-w-[1000px]  font-regular text-[#383838]'>
             Van Gogh's artistic legacy is often associated with his masterpieces from Arles, where the sun-drenched landscapes and vibrant yellow hues of works like "Sunflowers," "The Bedroom," and "The Yellow House" capture the essence of southern light and life. However, beyond these iconic pieces, Van Gogh's palette varied greatly throughout his career, from the earthy tones of his Dutch period to the lighter, brighter hues of his Parisian works, showcasing his versatility and evolution as an artist.
           </p>
         </div>
