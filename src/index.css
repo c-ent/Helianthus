@@ -4,7 +4,7 @@
 
 .petal {
     position: absolute;
-    width: 30px;
+    width: 60px;
     height: 60px;
     background-color: transparent;
   }
@@ -16,7 +16,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #FFA800; 
-    border-radius: 10px 130px 30px 130px;
+    background-color: #ffaa00; 
+    /* border-radius: 10px 130px 30px 130px; */
+    border-radius:100% 0;
     transform: rotate(45deg);
   }

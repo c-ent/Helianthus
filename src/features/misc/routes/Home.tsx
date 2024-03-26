@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 export const Home = () => {
 
   const petalVariants = {
-    hidden: { x: "100vw", y: "10  0vh", opacity: 0 },
+    hidden: { x: "100vw", y: "100vh", opacity: 0 },
     visible: { x: "-100vw", y: "-100vh", opacity: 1, rotate: Math.random() * 360 },
   };
 
@@ -14,14 +14,15 @@ export const Home = () => {
     <div className='relative overflow-hidden'>
 
           {/* Petals */}
-  {Array.from({ length: 30 }).map((_, i) => (
+  {Array.from({ length: 40 }).map((_, i) => (
     <motion.div
       key={i}
       className="petal"
       style={{ 
         left: `${Math.random() * 100}vw`, // Random horizontal position from the left
         bottom: `${Math.random() * 100}vh`,
-        
+        // backgroundColor: `hsl(${Math.random() * 30 + 30}, 100%, 50%)`, // Random hue similar to ffaa00
+        // borderRadius: `100% 0`,
       }}
       variants={petalVariants}
       initial="hidden"
@@ -34,7 +35,7 @@ export const Home = () => {
     />
   ))}
 
-    <div className="max-w-[1400px] m-auto px-10 py-5 ">
+    <div className="max-w-[1600px] m-auto px-10 py-5 ">
  
       <header className='flex justify-between'>
         <div className='flex space-x-5 text-lg'>
@@ -55,28 +56,40 @@ export const Home = () => {
         </div>
       </header>
       <section className='h-screen'>
-  <ScaleText widthOnly={true} className="">
-    <h1 className="font-Moglan text-[#FFA800] text-center underline decoration-[2px] underline-offset-[50px] leading-tight">Helianthus</h1>
-  </ScaleText>
-  <motion.div 
-    className="w-[100%] h-[380px] bg-center bg-cover" 
-    style={{ backgroundImage: `url(${sunflowers})` }}
-    initial={{ backgroundPositionY: "0%" }} 
-    animate={{ backgroundPositionY: ["0%", "100%", "0%"] }} 
-    transition={{ 
-      repeat: Infinity, 
-      duration: 45,
-      ease: "linear",
-      times: [0, 0.5, 1]
-    }} 
-  />  
+        <ScaleText widthOnly={true} className="">
+          <h1 className="font-Moglan text-[#FFA800] text-center underline decoration-[2px] underline-offset-[50px] leading-tight">Helianthus</h1>
+        </ScaleText>
+        <motion.div 
+          className="w-[100%] h-[380px] bg-center bg-cover" 
+          style={{ backgroundImage: `url(${sunflowers})` }}
+          initial={{ backgroundPositionY: "0%" }} 
+          animate={{ backgroundPositionY: ["0%", "100%", "0%"] }} 
+          transition={{ 
+            repeat: Infinity, 
+            duration: 45,
+            ease: "linear",
+            times: [0, 0.5, 1]
+          }} 
+        />  
+      </section>
 
- 
-</section>
+      <section className='space-y-10 py-40'>
+        <div className='flex-1'>
+        <h1 className='font-Moglan text-[106px] text-[#FFA800] underline decoration-[2px] underline-offset-[20px]'>introduction</h1>
+        </div>
+          
+        <div className='flex-1 flex justify-end'>
+          <p className='text-[64px] text-[24px] font-serif max-w-[1000px]  font-regular text-[#383838]'>
+            Van Gogh's artistic legacy is often associated with his masterpieces from Arles, where the sun-drenched landscapes and vibrant yellow hues of works like "Sunflowers," "The Bedroom," and "The Yellow House" capture the essence of southern light and life. However, beyond these iconic pieces, Van Gogh's palette varied greatly throughout his career, from the earthy tones of his Dutch period to the lighter, brighter hues of his Parisian works, showcasing his versatility and evolution as an artist.
+          </p>
+        </div>
+        
+      </section>
+
       <section>
-        <p className='text-[64px] mt-20 font-regular text-[#383838]'>
-          Helianti a Vincentio van Gogh mirabile testimonium ingenii eius manet, pulchritudinem atque vitalitatem naturae aeternam capiens.
-        </p>
+        <div className='flex-1 border-b-4 border-[#FFA800]'>
+          <h1 className='font-Moglan text-[86px] text-[#FFA800] u'>galleria</h1>
+          </div>
       </section>
 
       
