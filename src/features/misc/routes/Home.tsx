@@ -7,7 +7,7 @@ export const Home = () => {
 
   const petalVariants = {
     hidden: { x: "100vw", y: "100vh", opacity: 0 },
-    visible: { x: "-100vw", y: "-100vh", opacity: 100, rotate: Math.random() * 500 },
+    visible: { x: "-100vw", y: "-100vh", opacity: 100, rotate: Math.random() * 360 },
   };
 
   return (
@@ -29,13 +29,13 @@ export const Home = () => {
       animate="visible"
       transition={{
         repeat: Infinity,
-        duration: Math.random() * 20 + 20, // Random duration for each petal
-        delay: Math.random() * 10, // Random delay for each petal
+        duration: Math.random() * 30 + 30, // Random duration for each petal
+        delay: Math.random() * 7  , // Random delay for each petal
       }}
     />
   ))}
 
-    <div className="max-w-[1600px] m-auto px-10 py-5 ">
+    <div className="max-w-[1460px] m-auto px-10 py-5 ">
  
       <header className='flex justify-between'>
         <div className='flex space-x-5 text-lg'>
@@ -55,31 +55,33 @@ export const Home = () => {
 
         </div>
       </header>
-      <section className='h-screen'>
+      <section className=''>
         <ScaleText widthOnly={true} className="">
-          <h1 className="font-Moglan text-[#FFA800] text-center underline decoration-[2px] underline-offset-[50px] leading-tight">Helianthus</h1>
+          <h1 className="font-Moglan text-[#FFA800] text-center  underline decoration-[2px] underline-offset-[50px] leading-tight">Helianthus</h1>
         </ScaleText>
         <motion.div 
-          className="w-[100%] h-[380px] bg-center bg-cover" 
+          className="w-[100%] h-[380px] bg-center bg-cover " 
           style={{ backgroundImage: `url(${sunflowers})` }}
-          initial={{ backgroundPositionY: "0%" }} 
-          animate={{ backgroundPositionY: ["0%", "100%", "0%"] }} 
-          transition={{ 
-            repeat: Infinity, 
-            duration: 45,
-            ease: "linear",
-            times: [0, 0.5, 1]
-          }} 
+          // initial={{ backgroundPositionY: "0%" }} 
+          // animate={{ backgroundPositionY: ["0%", "100%", "0%"] }} 
+          // transition={{ 
+          //   repeat: Infinity, 
+          //   duration: 45,
+          //   ease: "linear",
+          //   times: [0, 0.5, 1]
+          // }} 
         />  
+
+        <p className='text-end text-[#4F4F4F] text-md'>Van Gogh's 'Sunflowers' (1888)</p>
       </section>
 
-      <section className='space-y-10 py-40'>
-        <div className='flex-1'>
-        <h1 className='font-Moglan text-[106px] text-[#FFA800] underline decoration-[2px] underline-offset-[20px]'>introduction</h1>
+      <section className='space-y-10 py-28 '>
+        <div className='flex-1 '>
+        <h1 className='font-Moglan text-[106px] text-[#FFA800] underline decoration-[2px] underline-offset-[2px]'>introduction</h1> 
         </div>
           
-        <div className='flex-1 flex justify-end'>
-          <p className='text-[64px] text-[22px] font-serif max-w-[1000px]  font-regular text-[#383838]'>
+        <div className='flex-1 flex justify-end py-44'>
+          <p className='text-[22px] font-serif max-w-[1000px]  font-regular text-[#383838]'>
             Van Gogh's artistic legacy is often associated with his masterpieces from Arles, where the sun-drenched landscapes and vibrant yellow hues of works like "Sunflowers," "The Bedroom," and "The Yellow House" capture the essence of southern light and life. However, beyond these iconic pieces, Van Gogh's palette varied greatly throughout his career, from the earthy tones of his Dutch period to the lighter, brighter hues of his Parisian works, showcasing his versatility and evolution as an artist.
           </p>
         </div>
