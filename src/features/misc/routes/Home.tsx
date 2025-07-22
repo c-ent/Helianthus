@@ -7,33 +7,39 @@ import fields from '../../../assets/images/gallery/fields.webp';
 import vangogh from '../../../assets/images/vangogh.webp';
 import { motion } from 'framer-motion';
 
+
+const Petals = () => (
+  <>
+    {Array.from({ length: 40 }).map((_, i) => (
+      <motion.div
+        key={i}
+        className="petal"
+        style={{ 
+          left: `${Math.random() * 100}vw`, 
+        }}
+        variants={{
+          hidden: { x: "100vw", y: "100vh", opacity: 0.8, rotate: Math.random() * 360 },
+          visible: { x: "-100vw", y: "-100vh", opacity: 0.8, rotate: Math.random() * 360 },
+        }}
+        initial="hidden"
+        animate="visible"
+        transition={{
+          repeat: Infinity,
+          duration: Math.random() * 30 + 30,
+          delay: Math.random() * 7, 
+        }}
+      />
+    ))}
+  </>
+);
+
+
 export const Home = () => {
 
   return (
     <div className='relative overflow-hidden'>
       {/* Petals */}
-      {Array.from({ length: 40 }).map((_, i) => {
-        return (
-          <motion.div
-            key={i}
-            className="petal"
-            style={{ 
-              left: `${Math.random() * 100}vw`, 
-            }}
-            variants={{
-              hidden: { x: "100vw", y: "100vh", opacity: 0.8, rotate: Math.random() * 360 },
-              visible: { x: "-100vw", y: "-100vh", opacity: 0.8, rotate: Math.random() * 360 },
-            }}
-            initial="hidden"
-            animate="visible"
-            transition={{
-              repeat: Infinity,
-              duration: Math.random() * 30 + 30,
-              delay: Math.random() * 7, 
-            }}
-          />
-        );
-      })}
+      <Petals />
 
       <div className="max-w-[1460px] m-auto px-5 md:px-10 py-5 ">
         <header className='flex justify-between items-center'>
@@ -55,7 +61,7 @@ export const Home = () => {
         {/* HERO SECTION */}
         <section className='h-[300px]   md:h-[90vh] flex flex-col'>
           <h1 className="font-Moglan text-[#FF890D] text-[clamp(50px,20vw,300px)] md:text-[clamp(100px,20vw,300px)] w-full text-center underline decoration-[2px] underline-offset-[clamp(15px,5vw,50px)] leading-tight">Helianthus</h1>
-          <motion.div 
+          <div 
             className="w-full flex-1 bg-center bg-cover" 
             style={{ backgroundImage: `url(${sunflowers})` }}
           />  
@@ -192,30 +198,6 @@ export const Home = () => {
             Cent
           </a>
         </footer>
-
-        {/* Petals at the end */}
-        {Array.from({ length: 40 }).map((_, i) => {
-          return (
-            <motion.div
-              key={`end-${i}`}
-              className="petal"
-              style={{ 
-                left: `${Math.random() * 100}vw`, 
-              }}
-              variants={{
-                hidden: { x: "100vw", y: "100vh", opacity: 0.8, rotate: Math.random() * 360 },
-                visible: { x: "-100vw", y: "-100vh", opacity: 0.8, rotate: Math.random() * 360 },
-              }}
-              initial="hidden"
-              animate="visible"
-              transition={{
-                repeat: Infinity,
-                duration: Math.random() * 30 + 30,
-                delay: Math.random() * 7, 
-              }}
-            />
-          );
-        })}
       </div>
     </div>
   );
