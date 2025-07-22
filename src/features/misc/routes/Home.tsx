@@ -1,44 +1,16 @@
-import sunflowers from '../../../assets/images/sunflowers.jpg';
-import sunflowersfull from '../../../assets/images/sunflowers-full.webp';
-import icon from '../../../assets/images/icon.svg'
-import cafe from '../../../assets/images/gallery/cafe.webp';
-import blue from '../../../assets/images/gallery/blue.webp';
-import fields from '../../../assets/images/gallery/fields.webp';  
-import vangogh from '../../../assets/images/vangogh.webp';
-import { motion } from 'framer-motion';
-
-
-const Petals = () => (
-  <>
-    {Array.from({ length: 40 }).map((_, i) => (
-      <motion.div
-        key={i}
-        className="petal"
-        style={{ 
-          left: `${Math.random() * 100}vw`, 
-        }}
-        variants={{
-          hidden: { x: "100vw", y: "100vh", opacity: 0.8, rotate: Math.random() * 360 },
-          visible: { x: "-100vw", y: "-100vh", opacity: 0.8, rotate: Math.random() * 360 },
-        }}
-        initial="hidden"
-        animate="visible"
-        transition={{
-          repeat: Infinity,
-          duration: Math.random() * 30 + 30,
-          delay: Math.random() * 7, 
-        }}
-      />
-    ))}
-  </>
-);
-
+import sunflowers from '@/assets/images/sunflowers.jpg';
+import sunflowersfull from '@/assets/images/sunflowers-full.webp';
+import icon from '@/assets/images/icon.svg'
+import cafe from '@/assets/images/gallery/cafe.webp';
+import blue from '@/assets/images/gallery/blue.webp';
+import fields from '@/assets/images/gallery/fields.webp';  
+import vangogh from '@/assets/images/vangogh.webp';
+import { Petals } from '@/components/Petals';
 
 export const Home = () => {
 
   return (
     <div className='relative overflow-hidden'>
-      {/* Petals */}
       <Petals />
 
       <div className="max-w-[1460px] m-auto px-5 md:px-10 py-5 ">
@@ -59,7 +31,7 @@ export const Home = () => {
         </header>
 
         {/* HERO SECTION */}
-        <section className='h-[300px]   md:h-[90vh] flex flex-col'>
+        <section className='h-[300px] md:h-[90vh] flex flex-col'>
           <h1 className="font-Moglan text-[#FF890D] text-[clamp(50px,20vw,300px)] md:text-[clamp(100px,20vw,300px)] w-full text-center underline decoration-[2px] underline-offset-[clamp(15px,5vw,50px)] leading-tight">Helianthus</h1>
           <div 
             className="w-full flex-1 bg-center bg-cover" 
@@ -191,7 +163,6 @@ export const Home = () => {
             Vincent Willem van Gogh was a Dutch Post-Impressionist painter who is among the most famous and influential figures in the history of Western art. In just over a decade, he created approximately 2100 artworks, including around 860 oil paintings, most of them in the last two years of his life.
           </p>
         </section>
-
 
         <footer className='pt-10 text-center text-[#737373]'>
           <a href='https://c-ent.dev/' className='font-Moglan text-[24px] md:text-[30px] text-black hover:text-[#FF890D] transition-colors duration-300'>
