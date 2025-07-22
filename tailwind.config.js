@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'Moglan': ['Moglan', 'sans-serif']
+        'Moglan': ['Moglan', 'sans-serif'],
+        'Poppins': ['Poppins', 'sans-serif'],
       }
     }
   },

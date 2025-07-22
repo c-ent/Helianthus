@@ -8,12 +8,12 @@ import trail5 from '../assets/images/trails/trail5.jpg';
 import trail6 from '../assets/images/trails/trail6.jpg';
 
 const Mousetrail = () => {
-    const [positions, setPositions] = useState([]);
+    const [positions, setPositions] = useState<{ x: number; y: number }[]>([]);
     const trails = [trail1, trail2, trail3, trail4, trail5, trail6];
     useEffect(() => {
       let lastPosition = { x: 0, y: 0 };
     
-      const handleMouseMove = (event) => {
+      const handleMouseMove = (event: MouseEvent) => {
         const currentPosition = { x: event.clientX, y: event.clientY };
     
         // Calculate the distance between the current and last position
