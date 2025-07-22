@@ -66,7 +66,7 @@ export const Home = () => {
         {/* INTRODUCTION SECTION */}  
         <section id='introduction' className='space-y-10 py-10 md:pt-28 '>
           <div className='flex-1 '>
-            <h1 className='font-Moglan text-[30px] md:text-[106px] text-[#FF890D] underline decoration-[2px] underline-offset-[30px]'>introduction</h1> 
+            <h1 className='font-Moglan text-[40px] md:text-[106px] text-[#FF890D] underline decoration-[2px] underline-offset-[30px]'>introduction</h1> 
           </div>
             
           <div className='flex-1 flex justify-end'>
@@ -79,7 +79,7 @@ export const Home = () => {
         {/* GALLERIA SECTION */}
         <section id="galleria" className='space-x-0 space-y-10 py-10 md:py-28 '>
           <div className='flex-1'>
-            <h1 className='font-Moglan text-[30px] md:text-[106px] text-[#FF890D] underline decoration-[2px] underline-offset-[30px]'>galleria</h1> 
+            <h1 className='font-Moglan text-[40px] md:text-[106px] text-[#FF890D] underline decoration-[2px] underline-offset-[30px]'>galleria</h1> 
           </div>
 
           <div className='flex flex-col md:flex-row w-full justify-between space-y-10 md:space-x-10'>
