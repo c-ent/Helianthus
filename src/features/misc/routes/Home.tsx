@@ -16,9 +16,9 @@ export const Home = () => {
       <div className="max-w-[1460px] m-auto px-5 md:px-10 py-5 ">
         <header className='flex justify-between items-center'>
           <div className='flex text-[#737373] space-x-2 md:space-x-5 text-[16px] md:text-lg font-Poppins'>
-            <a href='#' className='hover:text-[#FF890D] cursor-pointer focus:ring-2'>Home</a>
-            <a href='#introduction' className='hover:text-[#FF890D] cursor-pointer focus:ring-2'>Intro</a>
-            <a href='#galleria' className='hover:text-[#FF890D] cursor-pointer focus:ring-2'>Galleria</a>
+            <a href='#' className='hover:text-[#FF890D] cursor-pointer focus:ring-1 focus:ring-[#FF890D] px-1'>Home</a>
+            <a href='#introduction' className='hover:text-[#FF890D] cursor-pointer focus:ring-1 focus:ring-[#FF890D] px-1'>Intro</a>
+            <a href='#galleria' className='hover:text-[#FF890D] cursor-pointer focus:ring-1 focus:ring-[#FF890D] px-1'>Galleria</a>
           </div>
 
           <div className='flex items-center hover:animate-spin'>
