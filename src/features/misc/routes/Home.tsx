@@ -145,7 +145,7 @@ export const Home = () => {
           />
 
           <p className='text-[#4F4F4F] text-[16px] md:text-3xl'>
-            Sunflowers by Van Gogh remains a remarkable testament to his genius, capturing the timeless beauty and vitality of nature.
+            <i>Sunflowers</i> by Van Gogh remains a remarkable testament to his genius, capturing the timeless beauty and vitality of nature.
           </p>
         </section>
 
