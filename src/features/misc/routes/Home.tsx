@@ -16,9 +16,9 @@ export const Home = () => {
       <div className="max-w-[1460px] m-auto px-5 md:px-10 py-5 ">
         <header className='flex justify-between items-center'>
           <div className='flex text-[#737373] space-x-2 md:space-x-5 text-[16px] md:text-lg font-Poppins'>
-            <a href='#' className='hover:text-[#FF890D] cursor-pointer'>Home</a>
-            <a href='#introduction' className='hover:text-[#FF890D] cursor-pointer'>Intro</a>
-            <a href='#galleria' className='hover:text-[#FF890D] cursor-pointer'>Galleria</a>
+            <a href='#' className='hover:text-[#FF890D] cursor-pointer focus:ring-2'>Home</a>
+            <a href='#introduction' className='hover:text-[#FF890D] cursor-pointer focus:ring-2'>Intro</a>
+            <a href='#galleria' className='hover:text-[#FF890D] cursor-pointer focus:ring-2'>Galleria</a>
           </div>
 
           <div className='flex items-center hover:animate-spin'>
@@ -66,7 +66,7 @@ export const Home = () => {
               <div className='overflow-hidden'>
                 <img
                   src={cafe}
-                  alt="Cafe"
+                  alt="Café Terrace at Night - Van Gogh's painting of a night café with yellow lighting"
                   className='w-full h-[400px] md:h-[600px] object-cover hover:scale-105 transition-transform duration-300'
                 />      
               </div>
@@ -91,7 +91,7 @@ export const Home = () => {
               <div className='overflow-hidden'>
                 <img
                   src={blue}
-                  alt="Blue"
+                  alt='Blue Irises - Van Goghs painting of vibrant blue irises in a garden'
                   className='w-full h-[400px] md:h-[600px] object-cover hover:scale-105 transition-transform duration-300'
                 />
               </div>
@@ -115,7 +115,7 @@ export const Home = () => {
               <div className='overflow-hidden'>
                 <img
                   src={fields}
-                  alt="Fields"
+                  alt='Wheat Fields - Van Goghs painting of golden wheat fields under a blue sky'
                   className='w-full h-[400px] md:h-[600px] object-cover hover:scale-105 transition-transform duration-300'
                 />
               </div>

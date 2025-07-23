@@ -24,8 +24,6 @@ function App() {
     return <Loader />;
   }
 
-  <Loader />
-
   return (
     <AppProvider>
       <AppRoutes />
