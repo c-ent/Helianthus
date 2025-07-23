@@ -1,37 +1,36 @@
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
-import trail1 from '../assets/images/trails/trail1.jpg';
-import trail2 from '../assets/images/trails/trail2.jpg';
-import trail3 from '../assets/images/trails/trail3.jpg';
-import trail4 from '../assets/images/trails/trail4.jpg';
-import trail5 from '../assets/images/trails/trail5.jpg';
-import trail6 from '../assets/images/trails/trail6.jpg';
+import trail1 from '@/assets/images/trails/trail1.webp';
+import trail2 from '@/assets/images/trails/trail2.webp';
+import trail3 from '@/assets/images/trails/trail3.webp';
+import trail4 from '@/assets/images/trails/trail4.webp';
+import trail5 from '@/assets/images/trails/trail5.webp';
+import trail6 from '@/assets/images/trails/trail6.webp';
 
 const Mousetrail = () => {
-    const [positions, setPositions] = useState<{ x: number; y: number }[]>([]);
+    const [positions, setPositions] = useState<{ x: number; y: number; id: number }[]>([]);
     const trails = [trail1, trail2, trail3, trail4, trail5, trail6];
+    
     useEffect(() => {
       let lastPosition = { x: 0, y: 0 };
+      let nextId = 0;
     
       const handleMouseMove = (event: MouseEvent) => {
         const currentPosition = { x: event.clientX, y: event.clientY };
     
-        // Calculate the distance between the current and last position
         const distance = Math.sqrt(
           Math.pow(currentPosition.x - lastPosition.x, 2) +
           Math.pow(currentPosition.y - lastPosition.y, 2)
         );
     
-        // Set a threshold distance, adjust as needed
         const thresholdDistance = 70;
     
-        // If the mouse has moved beyond the threshold distance, add a new position
         if (distance > thresholdDistance) {
           setPositions((prevPositions) => [
             ...prevPositions,
-            { x: currentPosition.x, y: currentPosition.y },
+            { x: currentPosition.x, y: currentPosition.y, id: nextId++ },
           ]);
-          lastPosition = currentPosition; // Update the last position
+          lastPosition = currentPosition; 
         }
       };
     
@@ -42,31 +41,47 @@ const Mousetrail = () => {
       };
     }, []);
 
+    // Remove trail elements after they fade out
+    const handleAnimationComplete = (id: number) => {
+      setPositions(prev => prev.filter(pos => pos.id !== id));
+    };
+
   return (
-    <div>
-
-
-    {positions.map((position, index) => (
-        <motion.div
-        key={index}
-        initial={{ opacity: 10 }}
-        animate={{ opacity: 0 }}
-        transition={{ duration: 1 }}
-        style={{
-          position: 'absolute',
-          top: position.y,
-          left: position.x,
-          width: '200px',
-          height: '120px',
-          backgroundImage: `url(${trails[index % trails.length]})`,
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: 'cover',
-        }}
-      />
-      ))}
+    <div
+      style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        width: '100vw',
+        height: '100vh',
+        pointerEvents: 'none',
+        zIndex: 9999, 
+      }}
+    >
+      <AnimatePresence>
+        {positions.map((position) => (
+          <motion.div
+            key={position.id}
+            initial={{ opacity: 1 }}
+            animate={{ opacity: 0 }}
+            transition={{ duration: 1 }}
+            onAnimationComplete={() => handleAnimationComplete(position.id)}
+            style={{
+              position: 'absolute',
+              top: position.y - 40,
+              left: position.x - 40,
+              width: '80px',
+              height: '80px',
+              backgroundImage: `url(${trails[position.id % trails.length]})`,
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: 'cover',
+            }}
+          />
+        ))}
+      </AnimatePresence>
     </div>
-  )
+  );
 }
 
 export default Mousetrail
