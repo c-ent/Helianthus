@@ -31,7 +31,7 @@ export const Home = () => {
         </header>
 
         {/* HERO SECTION */}
-        <section className='h-[300px] md:h-[90vh] flex flex-col'>
+        <section className='h-[300px] md:h-[90vh] flex flex-col pb-10 md:pb-28 '>
           <h1 className="font-Moglan text-[#FF890D] text-[clamp(50px,20vw,300px)] md:text-[clamp(100px,20vw,300px)] w-full text-center underline decoration-[2px] underline-offset-[clamp(15px,5vw,50px)] leading-tight">Helianthus</h1>
           <div 
             className="w-full flex-1 bg-center bg-cover" 
@@ -42,7 +42,7 @@ export const Home = () => {
     
           
         {/* INTRODUCTION SECTION */}  
-        <section id='introduction' className='space-y-10 py-10 md:pt-28 '>
+        <section id='introduction' className='space-y-10 pb-10 md:pb-28'>
           <div className='flex-1 '>
             <h1 className='font-Moglan text-[40px] md:text-[106px] text-[#FF890D] underline decoration-[2px] underline-offset-[20px] md:underline-offset-[30px]'>introduction</h1> 
           </div>
@@ -55,7 +55,7 @@ export const Home = () => {
         </section>
 
         {/* GALLERIA SECTION */}
-        <section id="galleria" className='space-x-0 space-y-10 py-10 md:py-28 '>
+        <section id="galleria" className='space-x-0 space-y-10 pb-10 md:pb-28'>
           <div className='flex-1'>
             <h1 className='font-Moglan text-[40px] md:text-[106px] text-[#FF890D] underline decoration-[2px] underline-offset-[20px] md:underline-offset-[30px]'>galleria</h1> 
           </div>
@@ -137,7 +137,7 @@ export const Home = () => {
         </section>
 
         {/* OTHER SECTION */}
-        <section className='space-y-5 md:space-y-10  bg-[#FFEBA3] p-5 md:p-20 '>
+        <section className='space-y-5 md:space-y-10  bg-[#FFEBA3] p-5 md:p-20 mb-10 md:mb-28'>
           <img
             src={sunflowersfull}
             alt="Sunflowers"
@@ -150,7 +150,7 @@ export const Home = () => {
         </section>
 
         {/* VAN GOGH SECTION */}
-        <section className='mt-28 p-5 md:p-20 border-2 border-[#FFA800]'>
+        <section className='p-5 md:p-20 border-2 border-[#FFA800] mb-10'>
           <p className='font-Moglan text-[50px] md:text-[100px] text-center text-[#FFA800]'>Van Gogh</p>
           <div className='overflow-hidden'>
             <img
@@ -164,7 +164,7 @@ export const Home = () => {
           </p>
         </section>
 
-        <footer className='pt-10 text-center text-[#737373]'>
+        <footer className='text-center text-[#737373]'>
           <a href='https://c-ent.dev/' className='font-Moglan text-[24px] md:text-[30px] text-black hover:text-[#FF890D] transition-colors duration-300'>
             Cent
           </a>

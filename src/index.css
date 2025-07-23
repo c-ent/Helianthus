@@ -24,8 +24,11 @@
 
 
   @media (max-width: 768px) {
-  .petal {
-    width: 30px;
-    height: 30px;
+    .petal {
+      width: 30px;
+      height: 30px;
+    }
   }
-}
+
+
+
