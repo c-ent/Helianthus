@@ -4,7 +4,7 @@ import { AppRoutes } from '@/routes';
 import AnimatedCursor from 'react-animated-cursor';
 import { useEffect, useState } from 'react';
 import { Loader } from '@/components/Loader';
-import { Mousetrail } from '@/components/Mousetrail';
+import { Mousetrail } from '@/components/Mousetrail.tsx';
 
 
 
