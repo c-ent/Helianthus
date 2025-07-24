@@ -3,8 +3,8 @@ import './App.css';
 import { AppRoutes } from '@/routes';
 import AnimatedCursor from 'react-animated-cursor';
 import { useEffect, useState } from 'react';
-import { Mousetrail } from '@/components/Mousetrail';
 import { Loader } from '@/components/Loader';
+import { MousetrailImages } from './components/MousetrailImages';
 
 
 
@@ -31,7 +31,7 @@ function App() {
   return (
     <AppProvider>
       <AppRoutes />
-      <Mousetrail />
+      <MousetrailImages />
       <AnimatedCursor
         innerSize={0}
         outerSize={30}

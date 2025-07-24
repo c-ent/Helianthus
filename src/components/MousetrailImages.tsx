@@ -7,8 +7,7 @@ import trail4 from '@/assets/images/trails/trail4.webp';
 import trail5 from '@/assets/images/trails/trail5.webp';
 import trail6 from '@/assets/images/trails/trail6.webp';
 
-// Force fresh build - remove this comment after successful deploy
-export const Mousetrail = () => {
+export const MousetrailImages = () => {
     const [positions, setPositions] = useState<{ x: number; y: number; id: number }[]>([]);
     const trails = [trail1, trail2, trail3, trail4, trail5, trail6];
     
