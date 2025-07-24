@@ -1,6 +1,6 @@
 import icon from '@/assets/images/icon.svg'
 
-const Loader = () => {
+export const Loader = () => {
 return (
     <div className="h-screen w-screen flex items-center justify-center bg-white">
     <img
@@ -12,4 +12,3 @@ return (
 );
 };
 
-export default Loader;
