@@ -31,7 +31,7 @@ export const Home = () => {
         </header>
 
         {/* HERO SECTION */}
-        <section className='h-[300px] md:h-[100vh] flex flex-col pb-10 md:pb-28 '>
+        <section className='h-[300px] md:h-[980px] flex flex-col pb-10 md:pb-28 '>
           <h1 className="font-Moglan text-[#FF890D] text-[clamp(50px,20vw,300px)] md:text-[clamp(100px,20vw,300px)] w-full text-center underline decoration-[2px] underline-offset-[clamp(15px,5vw,50px)] leading-tight">Helianthus</h1>
           <div 
             className="w-full flex-1 bg-center bg-cover" 
