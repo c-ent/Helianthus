@@ -1,30 +1,128 @@
-# React + TypeScript + Vite
+# Helianthus
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive web application based on Van Goghs "Sunflower" built with React, TypeScript, and Vite
 
-Currently, two official plugins are available:
+## 🌻 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Interactive Animations**: Smooth animations powered by Framer Motion and GSAP
+- **Custom Mouse Effects**: Dynamic mouse trail and cursor interactions
+- **Responsive Design**: Built with Tailwind CSS
+- **Type Safety**: Full TypeScript support
+- **Modern Stack**: Vite and React 18
 
-## Expanding the ESLint configuration
+## 🚀 Quick Start
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Prerequisites
 
-- Configure the top-level `parserOptions` property like this:
+- Node.js (version 16 or higher)
+- npm or yarn
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/c-ent/Helianthus.git
+
+# Navigate to the project directory
+cd Helianthus
+
+# Install dependencies
+npm install
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Development
+
+```bash
+# Start the development server
+npm run dev
+```
+
+The application will be available at `http://localhost:5173`
+
+### Build
+
+```bash
+# Build for production
+npm run build
+
+# Preview the production build
+npm run preview
+```
+
+### Linting
+
+```bash
+# Run ESLint
+npm run lint
+```
+
+## 🛠️ Tech Stack
+
+### Core
+- *React 18*
+- *TypeScript*
+- *Vite*
+
+### Styling
+- *Tailwind CSS* 
+- *PostCSS*
+
+### Animation & Effects
+- *Framer Motion*
+- *GSAP*
+- *React Animated Cursor*
+- *Mouse Follower*
+
+### Routing & State
+- *React Router DOM*
+- *React Error Boundary*
+- *React Helmet Async*
+
+## 📁 Project Structure
+
+```
+Helianthus/
+├── public/              # Static assets
+├── src/
+│   ├── assets/          # Images, fonts, and other assets
+│   │   ├── fonts/
+│   │   └── images/
+│   │       ├── gallery/
+│   │       └── trails/
+│   ├── components/      # Reusable components
+│   │   ├── Loader.tsx
+│   │   ├── MousetrailImages.tsx
+│   │   └── Petals.tsx
+│   ├── features/        # Feature-based modules
+│   │   └── misc/
+│   │       └── routes/
+│   ├── providers/       # Context providers
+│   │   └── app.tsx
+│   ├── routes/          # Route configuration
+│   │   ├── index.tsx
+│   │   └── public.tsx
+│   ├── App.tsx          # Main App component
+│   ├── main.tsx         # Application entry point
+│   └── index.css        # Global styles
+├── index.html
+├── package.json
+├── tsconfig.json
+├── vite.config.ts
+└── tailwind.config.js
+```
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📝 License
+
+This project is currently licensed for public use.
+
+## 👤 Author
+
+Elher Encarnacion
+
+---
+
+Built with ❤️ using React + TypeScript + Vite
