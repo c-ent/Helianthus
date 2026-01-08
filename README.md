@@ -119,10 +119,6 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 This project is currently licensed for public use.
 
-## 👤 Author
-
-Elher Encarnacion
-
 ---
 
 Built with ❤️ using React + TypeScript + Vite
