@@ -1,124 +1,82 @@
-# Helianthus
+# Helianthus 🌻
 
-An interactive web application based on Van Goghs "Sunflower" built with React, TypeScript, and Vite
+An interactive web application inspired by Van Gogh's "Sunflowers" built with React, TypeScript, and Vite.
 
-## 🌻 Features
+## Features
 
 - **Interactive Animations**: Smooth animations powered by Framer Motion and GSAP
-- **Custom Mouse Effects**: Dynamic mouse trail and cursor interactions
-- **Responsive Design**: Built with Tailwind CSS
-- **Type Safety**: Full TypeScript support
-- **Modern Stack**: Vite and React 18
+- **Custom Mouse Effects**: Dynamic mouse trail and cursor interactions with Van Gogh artwork
+- **Responsive Design**: Fully responsive layout built with Tailwind CSS
+- **Type Safety**: Complete TypeScript implementation
+- **Modern Stack**: Built with Vite and React 18 for optimal performance
 
-## 🚀 Quick Start
+## Tech Stack
+
+- **Frontend**: React 18, TypeScript, Vite
+- **Styling**: Tailwind CSS, PostCSS
+- **Animations**: Framer Motion, GSAP
+- **Effects**: React Animated Cursor, Mouse Follower
+- **Routing**: React Router DOM
+- **Additional**: React Error Boundary, React Helmet Async
+
+## Getting Started
 
 ### Prerequisites
 
-- Node.js (version 16 or higher)
-- npm or yarn
+- Node.js (v16 or higher)
+- npm or yarn package manager
 
 ### Installation
 
+1. Clone the repository:
 ```bash
-# Clone the repository
 git clone https://github.com/c-ent/Helianthus.git
-
-# Navigate to the project directory
 cd Helianthus
+```
 
-# Install dependencies
+2. Install dependencies:
+```bash
 npm install
 ```
 
-### Development
-
+3. Start the development server:
 ```bash
-# Start the development server
 npm run dev
 ```
 
 The application will be available at `http://localhost:5173`
 
-### Build
+## Available Scripts
 
-```bash
-# Build for production
-npm run build
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
 
-# Preview the production build
-npm run preview
-```
-
-### Linting
-
-```bash
-# Run ESLint
-npm run lint
-```
-
-## 🛠️ Tech Stack
-
-### Core
-- *React 18*
-- *TypeScript*
-- *Vite*
-
-### Styling
-- *Tailwind CSS* 
-- *PostCSS*
-
-### Animation & Effects
-- *Framer Motion*
-- *GSAP*
-- *React Animated Cursor*
-- *Mouse Follower*
-
-### Routing & State
-- *React Router DOM*
-- *React Error Boundary*
-- *React Helmet Async*
-
-## 📁 Project Structure
+## Project Structure
 
 ```
-Helianthus/
-├── public/              # Static assets
+helianthus/
 ├── src/
-│   ├── assets/          # Images, fonts, and other assets
-│   │   ├── fonts/
-│   │   └── images/
-│   │       ├── gallery/
-│   │       └── trails/
-│   ├── components/      # Reusable components
-│   │   ├── Loader.tsx
-│   │   ├── MousetrailImages.tsx
-│   │   └── Petals.tsx
-│   ├── features/        # Feature-based modules
-│   │   └── misc/
-│   │       └── routes/
-│   ├── providers/       # Context providers
-│   │   └── app.tsx
-│   ├── routes/          # Route configuration
-│   │   ├── index.tsx
-│   │   └── public.tsx
-│   ├── App.tsx          # Main App component
-│   ├── main.tsx         # Application entry point
-│   └── index.css        # Global styles
-├── index.html
-├── package.json
-├── tsconfig.json
-├── vite.config.ts
-└── tailwind.config.js
+│   ├── assets/            # Images and fonts
+│   │   ├── fonts/         # Custom fonts
+│   │   └── images/        # Images Folder
+│   ├── components/        # Reusable components
+│   ├── features/          # Feature-based modules
+│   ├── providers/         # Context providers
+│   └── routes/            # Route configuration
+└── public/                # Static assets
 ```
 
-## 🤝 Contributing
+## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome! Feel free to:
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-## 📝 License
+## License
 
-This project is currently licensed for public use.
-
----
-
-Built with ❤️ using React + TypeScript + Vite
+This project is licensed under the MIT License - see the `LICENSE` file for details.
