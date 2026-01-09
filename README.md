@@ -4,7 +4,7 @@ An interactive web application inspired by Van Gogh's "Sunflowers" built with Re
 
 ## Features
 
-- **Interactive Animations**: Smooth animations powered by Framer Motion and GSAP
+- **Interactive Animations**: Smooth animations powered by Framer Motion
 - **Custom Mouse Effects**: Dynamic mouse trail and cursor interactions with Van Gogh artwork
 - **Responsive Design**: Fully responsive layout built with Tailwind CSS
 - **Type Safety**: Complete TypeScript implementation
@@ -14,7 +14,7 @@ An interactive web application inspired by Van Gogh's "Sunflowers" built with Re
 
 - **Frontend**: React 18, TypeScript, Vite
 - **Styling**: Tailwind CSS, PostCSS
-- **Animations**: Framer Motion, GSAP
+- **Animations**: Framer Motion
 - **Effects**: React Animated Cursor, Mouse Follower
 - **Routing**: React Router DOM
 - **Additional**: React Error Boundary, React Helmet Async

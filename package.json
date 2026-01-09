@@ -12,7 +12,6 @@
   "dependencies": {
     "@gmurph91/react-textfit": "^1.1.4",
     "framer-motion": "^11.0.20",
-    "gsap": "^3.12.5",
     "mouse-follower": "^1.1.2",
     "react": "^18.2.0",
     "react-animated-cursor": "^2.11.2",
