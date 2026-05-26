@@ -6,9 +6,6 @@ import { useEffect, useState } from 'react';
 import { Loader } from '@/components/Loader';
 import { MousetrailImages } from './components/MousetrailImages';
 
-
-
-
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 

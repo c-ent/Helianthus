@@ -23,7 +23,7 @@ An interactive web application inspired by Van Gogh's "Sunflowers" built with Re
 
 ### Prerequisites
 
-- Node.js (v16 or higher)
+- Node.js (v20 or higher)
 - npm or yarn package manager
 
 ### Installation
@@ -76,6 +76,8 @@ Contributions are welcome! Feel free to:
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
+
+All pull requests automatically run lint and build checks via GitHub Actions.
 
 ## License
 
