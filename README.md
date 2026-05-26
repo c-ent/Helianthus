@@ -15,7 +15,8 @@ An interactive web application inspired by Van Gogh's "Sunflowers" built with Re
 - **Frontend**: React 18, TypeScript, Vite
 - **Styling**: Tailwind CSS, PostCSS
 - **Animations**: Framer Motion
-- **Effects**: React Animated Cursor, Mouse Follower
+- **Effects**: React Animated Cursor, Mouse Follower, React SVG Mouse Follower
+- **Text Scaling**: React Textfit, React Scale Text
 - **Routing**: React Router DOM
 - **Additional**: React Error Boundary, React Helmet Async
 
@@ -56,7 +57,7 @@ The application will be available at `http://localhost:5173`
 ## Project Structure
 
 ```
-helianthus/
+Helianthus/
 ├── src/
 │   ├── assets/            # Images and fonts
 │   │   ├── fonts/         # Custom fonts
@@ -81,4 +82,4 @@ All pull requests automatically run lint and build checks via GitHub Actions.
 
 ## License
 
-This project is licensed under the MIT License - see the `LICENSE` file for details.
+This project is licensed under the MIT License.
