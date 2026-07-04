@@ -1,175 +1,146 @@
 import sunflowers from '@/assets/images/sunflowers.jpg';
 import sunflowersfull from '@/assets/images/sunflowers-full.webp';
-import icon from '@/assets/images/icon.svg'
 import cafe from '@/assets/images/gallery/cafe.webp';
 import blue from '@/assets/images/gallery/blue.webp';
-import fields from '@/assets/images/gallery/fields.webp';  
+import fields from '@/assets/images/gallery/fields.webp';
 import vangogh from '@/assets/images/vangogh.webp';
 import { Petals } from '@/components/Petals';
+import { Header } from '@/components/Header';
+import { SectionHeading } from '@/components/SectionHeading';
+import { GalleryCard } from '@/components/GalleryCard';
 
-export const Home = () => {
+const GALLERY_ITEMS = [
+  {
+    image: cafe,
+    alt: "Café Terrace at Night - Van Gogh's painting of a night café with yellow lighting",
+    label: "café-terras 's nachts",
+    number: '01',
+    title: 'Café Terrace at Night',
+    staggerClass: '',
+  },
+  {
+    image: blue,
+    alt: "Blue Irises - Van Gogh's painting of vibrant blue irises in a garden",
+    label: "l'iris",
+    number: '02',
+    title: 'Irises',
+    staggerClass: 'md:pt-[150px]',
+  },
+  {
+    image: fields,
+    alt: "Wheat Fields - Van Gogh's painting of golden wheat fields under a blue sky",
+    label: 'champs de blé',
+    number: '03',
+    title: 'Wheat Fields',
+    staggerClass: 'md:pt-[300px]',
+  },
+] as const;
 
-  return (
-    <div className='relative overflow-hidden'>
-      <Petals />
+export const Home = () => (
+  <div id="top">
+    <a href="#main-content" className="skip-link">
+      Skip to content
+    </a>
 
-      <div className="max-w-[1460px] m-auto px-5 md:px-10 py-5 ">
-        <header className='flex justify-between items-center'>
-          <div className='flex text-[#737373] space-x-2 md:space-x-5 text-[16px] md:text-lg font-Poppins'>
-            <a href='#' className='hover:text-[#FF890D] cursor-pointer focus:ring-1 focus:ring-[#FF890D] px-1'>Home</a>
-            <a href='#introduction' className='hover:text-[#FF890D] cursor-pointer focus:ring-1 focus:ring-[#FF890D] px-1'>Intro</a>
-            <a href='#galleria' className='hover:text-[#FF890D] cursor-pointer focus:ring-1 focus:ring-[#FF890D] px-1'>Galleria</a>
-          </div>
+    <Header />
+    <Petals />
 
-          <div className='flex items-center hover:animate-spin'>
-            <img
-              src={icon}
-              alt="Logo"
-              className='w-[30px] md:w-[50px] md:h-[50px] object-contain'
-            />
-          </div>
-        </header>
-
-        {/* HERO SECTION */}
-        <section className='h-[300px] md:h-[980px] flex flex-col pb-10 md:pb-28 '>
-          <h1 className="font-Moglan text-[#FF890D] text-[clamp(50px,20vw,300px)] md:text-[clamp(100px,20vw,300px)] w-full text-center underline decoration-[2px] underline-offset-[clamp(15px,5vw,50px)] leading-tight">Helianthus</h1>
-          <div 
-            className="w-full flex-1 bg-center bg-cover" 
+    <div className="relative overflow-hidden">
+      <div className="relative mx-auto max-w-content px-5 py-5 md:px-10">
+      <main id="main-content">
+        <section
+          aria-labelledby="hero-heading"
+          className="flex min-h-[320px] flex-col pb-10 md:min-h-[980px] md:pb-28"
+        >
+          <h1
+            id="hero-heading"
+            className="w-full text-center font-Moglan text-[clamp(50px,20vw,300px)] leading-tight text-helianthus-orange underline decoration-2 underline-offset-[clamp(15px,5vw,50px)] md:text-[clamp(100px,20vw,300px)]"
+          >
+            Helianthus
+          </h1>
+          <div
+            className="mt-4 w-full flex-1 rounded-sm bg-cover bg-center"
             style={{ backgroundImage: `url(${sunflowers})` }}
-          />  
-          <p className='text-end text-[#4F4F4F] text-lg md:text-2xl'>Van Gogh's 'Sunflowers' (1888)</p>
+            role="img"
+            aria-label="Van Gogh's Sunflowers painting"
+          />
+          <p className="mt-3 text-end text-lg text-helianthus-gray-dark md:text-2xl">
+            Van Gogh&apos;s &apos;Sunflowers&apos; (1888)
+          </p>
         </section>
-    
-          
-        {/* INTRODUCTION SECTION */}  
-        <section id='introduction' className='space-y-10 pb-10 md:pb-28'>
-          <div className='flex-1 '>
-            <h1 className='font-Moglan text-[40px] md:text-[106px] text-[#FF890D] underline decoration-[2px] underline-offset-[20px] md:underline-offset-[30px]'>introduction</h1> 
-          </div>
-            
-          <div className='flex-1 flex justify-end'>
-            <p className='text-[16px] md:text-[22px] font-Poppins max-w-[1000px]  font-regular text-[#383838]'>
-              Van Gogh's artistic legacy is often associated with his masterpieces from Arles, where the sun-drenched landscapes and vibrant yellow hues of works like "Sunflowers," "The Bedroom," and "The Yellow House" capture the essence of southern light and life. However, beyond these iconic pieces, Van Gogh's palette varied greatly throughout his career, from the earthy tones of his Dutch period to the lighter, brighter hues of his Parisian works, showcasing his versatility and evolution as an artist.
+
+        <section id="introduction" className="section-padding scroll-mt-24 space-y-10">
+          <SectionHeading>introduction</SectionHeading>
+
+          <div className="flex justify-end">
+            <p className="body-text max-w-[1000px]">
+              Van Gogh&apos;s artistic legacy is often associated with his masterpieces from Arles,
+              where the sun-drenched landscapes and vibrant yellow hues of works like
+              &quot;Sunflowers,&quot; &quot;The Bedroom,&quot; and &quot;The Yellow House&quot; capture
+              the essence of southern light and life. However, beyond these iconic pieces, Van
+              Gogh&apos;s palette varied greatly throughout his career, from the earthy tones of his
+              Dutch period to the lighter, brighter hues of his Parisian works, showcasing his
+              versatility and evolution as an artist.
             </p>
           </div>
         </section>
 
-        {/* GALLERIA SECTION */}
-        <section id="galleria" className='space-x-0 space-y-10 pb-10 md:pb-28'>
-          <div className='flex-1'>
-            <h1 className='font-Moglan text-[40px] md:text-[106px] text-[#FF890D] underline decoration-[2px] underline-offset-[20px] md:underline-offset-[30px]'>galleria</h1> 
-          </div>
+        <section id="galleria" className="section-padding scroll-mt-24 space-y-10">
+          <SectionHeading>galleria</SectionHeading>
 
-          <div className='flex flex-col md:flex-row w-full justify-between space-y-10 md:space-x-10'>
-            {/* CARD 1 */}
-            <div className='space-y-2'>
-              <div className='overflow-hidden'>
-                <img
-                  src={cafe}
-                  alt="Café Terrace at Night - Van Gogh's painting of a night café with yellow lighting"
-                  className='w-full h-[400px] md:h-[600px] object-cover hover:scale-105 transition-transform duration-300'
-                />      
-              </div>
-              
-
-              <div className='inline-block bg-[#2F558B] px-2 text-white'>
-                <p>café-terras 's nachts</p>
-              </div>
-              
-              <div className='text-[#FFA800] flex items-center space-x-2'>
-                <p className='text-[#FFA80] text-3xl'>
-                  01
-                </p>
-                <p className='text-[20px] md:text-2xl'>
-                  Café Terrace at Night
-                </p>
-              </div>
-            </div>
-
-            {/* CARD 2 */}
-            <div className='space-y-2 pt-0 md:pt-[150px]'>
-              <div className='overflow-hidden'>
-                <img
-                  src={blue}
-                  alt='Blue Irises - Van Goghs painting of vibrant blue irises in a garden'
-                  className='w-full h-[400px] md:h-[600px] object-cover hover:scale-105 transition-transform duration-300'
-                />
-              </div>
-
-              <div className='inline-block bg-[#2F558B] px-2 text-white'>
-                <p>l'iris</p>
-              </div>
-              
-              <div className='text-[#FFA800] flex items-center space-x-2'>
-                <p className='text-[#FFA80] text-3xl'>
-                  02
-                </p>
-                <p className='text-[20px] md:text-2xl'>
-                  Irises
-                </p>
-              </div>
-            </div>
-
-            {/* CARD 3 */}
-            <div className='space-y-2 pt-0 md:pt-[300px]'>
-              <div className='overflow-hidden'>
-                <img
-                  src={fields}
-                  alt='Wheat Fields - Van Goghs painting of golden wheat fields under a blue sky'
-                  className='w-full h-[400px] md:h-[600px] object-cover hover:scale-105 transition-transform duration-300'
-                />
-              </div>
-
-              <div className='inline-block bg-[#2F558B] px-2 text-white'>
-                <p>champs de blé</p>
-              </div>
-              
-              <div className='text-[#FFA800] flex items-center space-x-2'>
-                <p className='text-[#FFA80] text-3xl'>
-                  03
-                </p>
-                <p className='text-[20px] md:text-2xl'>
-                  Wheat Fields
-                </p>
-              </div>
-            </div>
+          <div className="flex w-full flex-col justify-between gap-10 md:flex-row md:gap-10">
+            {GALLERY_ITEMS.map((item) => (
+              <GalleryCard key={item.number} {...item} />
+            ))}
           </div>
         </section>
 
-        {/* OTHER SECTION */}
-        <section className='space-y-5 md:space-y-10  bg-[#FFEBA3] p-5 md:p-20 mb-10 md:mb-28'>
+        <section className="section-padding mb-10 space-y-5 bg-helianthus-cream p-5 md:mb-28 md:space-y-10 md:p-20">
           <img
             src={sunflowersfull}
-            alt="Sunflowers"
-            className='w-full h-[300px] md:h-[800px] object-cover hover:scale-105 transition-transform duration-300'
+            alt="Sunflowers full painting by Van Gogh"
+            className="gallery-image h-[300px] md:h-[800px]"
+            loading="lazy"
           />
 
-          <p className='text-[#4F4F4F] text-[16px] md:text-3xl'>
-            <i>Sunflowers</i> by Van Gogh remains a remarkable testament to his genius, capturing the timeless beauty and vitality of nature.
+          <p className="text-base text-helianthus-gray-dark md:text-3xl">
+            <i>Sunflowers</i> by Van Gogh remains a remarkable testament to his genius, capturing the
+            timeless beauty and vitality of nature.
           </p>
         </section>
 
-        {/* VAN GOGH SECTION */}
-        <section className='p-5 md:p-20 border-2 border-[#FFA800] mb-10'>
-          <p className='font-Moglan text-[50px] md:text-[100px] text-center text-[#FFA800]'>Van Gogh</p>
-          <div className='overflow-hidden'>
+        <section className="mb-10 border-2 border-helianthus-gold p-5 md:p-20">
+          <h2 className="text-center font-Moglan text-[50px] text-helianthus-gold md:text-[100px]">
+            Van Gogh
+          </h2>
+          <div className="overflow-hidden">
             <img
               src={vangogh}
-              alt="Van Gogh"
-              className='w-full h-[250px] object-contain hover:scale-105 transition-transform duration-300'
+              alt="Portrait of Vincent van Gogh"
+              className="h-[250px] w-full object-contain transition-transform duration-300 hover:scale-105"
+              loading="lazy"
             />
           </div>
-          <p className='text-center max-w-[800px] m-auto mt-10 text-[16px]  md:text-xl'>
-            Vincent Willem van Gogh was a Dutch Post-Impressionist painter who is among the most famous and influential figures in the history of Western art. In just over a decade, he created approximately 2100 artworks, including around 860 oil paintings, most of them in the last two years of his life.
+          <p className="body-text mx-auto mt-10 max-w-[800px] text-center md:text-xl">
+            Vincent Willem van Gogh was a Dutch Post-Impressionist painter who is among the most
+            famous and influential figures in the history of Western art. In just over a decade, he
+            created approximately 2100 artworks, including around 860 oil paintings, most of them in
+            the last two years of his life.
           </p>
         </section>
+      </main>
 
-        <footer className='text-center text-[#737373]'>
-          <a href='https://c-ent.dev/' className='font-Moglan text-[24px] md:text-[30px] text-black hover:text-[#FF890D] transition-colors duration-300'>
-            Cent
-          </a>
-        </footer>
+      <footer className="pb-8 text-center text-helianthus-gray">
+        <a
+          href="https://c-ent.dev/"
+          className="font-Moglan text-2xl text-black transition-colors duration-300 hover:text-helianthus-orange focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-helianthus-orange focus-visible:ring-offset-2 md:text-[30px]"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Cent
+        </a>
+      </footer>
       </div>
     </div>
-  );
-};
+  </div>
+);

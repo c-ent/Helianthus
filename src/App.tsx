@@ -36,7 +36,7 @@ function App() {
         outerAlpha={0.4}
         innerScale={0.1}
         outerScale={2}
-        showSystemCursor={true}
+        showSystemCursor={false}
         outerStyle={{
           border: '3px solid var(--cursor-color)',
         }}

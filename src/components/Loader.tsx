@@ -1,14 +1,17 @@
-import icon from '@/assets/images/icon.svg'
+import icon from '@/assets/images/icon.svg';
 
-export const Loader = () => {
-return (
-    <div className="h-screen w-screen flex items-center justify-center bg-white">
+export const Loader = () => (
+  <div
+    className="flex h-screen w-screen items-center justify-center bg-white"
+    role="status"
+    aria-live="polite"
+    aria-label="Loading"
+  >
     <img
-        src={icon}
-        alt="Loading..."
-        className="spinning-icon animate-spin"
+      src={icon}
+      alt=""
+      className="h-12 w-12 animate-spin md:h-16 md:w-16"
+      aria-hidden="true"
     />
-    </div>
+  </div>
 );
-};
-

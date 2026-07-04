@@ -25,7 +25,7 @@ An interactive web application inspired by Van Gogh's "Sunflowers" built with Re
 ### Prerequisites
 
 - Node.js (v20 or higher)
-- npm or yarn package manager
+- npm
 
 ### Installation
 
@@ -69,6 +69,7 @@ Helianthus/
 └── public/                # Static assets
 ```
 
+
 ## Contributing
 
 Contributions are welcome! Feel free to:
@@ -82,4 +83,4 @@ All pull requests automatically run lint and build checks via GitHub Actions.
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the [MIT License](LICENSE).

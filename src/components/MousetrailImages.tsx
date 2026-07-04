@@ -41,6 +41,7 @@ export const MousetrailImages = () => {
       };
     }, []);
 
+
     // Remove trail elements after they fade out
     const handleAnimationComplete = (id: number) => {
       setPositions(prev => prev.filter(pos => pos.id !== id));
@@ -48,15 +49,8 @@ export const MousetrailImages = () => {
 
   return (
     <div
-      style={{
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        width: '100vw',
-        height: '100vh',
-        pointerEvents: 'none',
-        zIndex: 9999, 
-      }}
+      className="pointer-events-none fixed inset-0 z-[9999] hidden md:block"
+      aria-hidden="true"
     >
       <AnimatePresence>
         {positions.map((position) => (
