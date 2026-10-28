@@ -2,14 +2,6 @@
 
 An interactive web application inspired by Van Gogh's "Sunflowers" built with React, TypeScript, and Vite.
 
-## Features
-
-- **Interactive Animations**: Smooth animations powered by Framer Motion
-- **Custom Mouse Effects**: Dynamic mouse trail and cursor interactions with Van Gogh artwork
-- **Responsive Design**: Fully responsive layout built with Tailwind CSS
-- **Type Safety**: Complete TypeScript implementation
-- **Modern Stack**: Built with Vite and React 18 for optimal performance
-
 ## Tech Stack
 
 - **Frontend**: React 18, TypeScript, Vite
